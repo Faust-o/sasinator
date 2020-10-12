@@ -1,7 +1,8 @@
 # sasinator
 
 ## Ogólne informacje
-Projekt przeliczjący wartości na wartości sasin.
+Aplikacja przeliczjąca wartości na wartości sasin.
+Może być poszerzana o nowe funkcjonalności powiązane z jednostką sasin.
 	
 ## Technologie
 Technologie używane w projekcie:
