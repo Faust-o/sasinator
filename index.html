@@ -99,9 +99,23 @@
 
         const Sasinator = function()
         {
+<<<<<<< HEAD
             const insertValue = parseFloat(document.getElementById('insertValue').value);
             document.getElementById('result').value = Number.isNaN(insertValue) ? 'wpisz poprawną liczbę' :
             (insertValue / sasinValue).toFixed(13);
+=======
+            let insertValue = document.getElementById('insertValue').value;
+            const sasinValue = 70000000;  
+         
+            switch(operator) 
+            {
+                case 'Przelicz':
+                    var result = parseFloat(insertValue) / parseFloat(sasinValue);         
+                break;    
+            }
+         
+            document.getElementById('result').value = result.toFixed(13);
+>>>>>>> 5279d5b898973a458a08ee1ac7e8dbf02cc25889
         }
 
         document.querySelector('#sasinator button').addEventListener('click', Sasinator);
