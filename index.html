@@ -95,13 +95,13 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
     </body>
     <script>
-        const sasinValue = 70000000;
+        const SASIN_PRZEJEBANED = 70000000;
 
         const Sasinator = function()
         {
             const insertValue = parseFloat(document.getElementById('insertValue').value);
             document.getElementById('result').value = Number.isNaN(insertValue) ? 'wpisz poprawną liczbę' :
-            (insertValue / sasinValue).toFixed(13);
+            (insertValue / SASIN_PRZEJEBANED).toFixed(13);
         }
 
         document.querySelector('#sasinator button').addEventListener('click', Sasinator);
