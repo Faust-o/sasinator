@@ -24,18 +24,21 @@
                         <h3>Przelicznik na uniwersalną jednostkę - sasin</h3>
                     </header>
                     
-                    <div class="w-100 p-3 d-flex justify-content-center">
+                    <div class="w-100 p-3 d-flex text-center justify-content-center">
                     <section id="article-content">
-                        <p><form id="sasinator">
-                            <input type="text" id="insertValue" placeholder="Wprowadź wartość"> =
-                            <input type="text" id="result" placeholder="" disabled="disabled"> sasin
+                        <p><div id="sasinator">
+                            <input type="text" id="insertValue" placeholder="Wprowadź wartość" required>
                             <div class="w-100 p-3 d-flex justify-content-center">
-                                <button type="button" class="btn btn-outline-dark">Przelicz</button>
+                                <button type="button" class="btn btn-outline-dark">Przelicz </button>
+                                <button style="margin-left:5px;" type="button" class="btn btn-outline-secondary"><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-shuffle" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                  <path fill-rule="evenodd" d="M0 3.5A.5.5 0 0 1 .5 3H1c2.202 0 3.827 1.24 4.874 2.418.49.552.865 1.102 1.126 1.532.26-.43.636-.98 1.126-1.532C9.173 4.24 10.798 3 13 3v1c-1.798 0-3.173 1.01-4.126 2.082A9.624 9.624 0 0 0 7.556 8a9.624 9.624 0 0 0 1.317 1.918C9.828 10.99 11.204 12 13 12v1c-2.202 0-3.827-1.24-4.874-2.418A10.595 10.595 0 0 1 7 9.05c-.26.43-.636.98-1.126 1.532C4.827 11.76 3.202 13 1 13H.5a.5.5 0 0 1 0-1H1c1.798 0 3.173-1.01 4.126-2.082A9.624 9.624 0 0 0 6.444 8a9.624 9.624 0 0 0-1.317-1.918C4.172 5.01 2.796 4 1 4H.5a.5.5 0 0 1-.5-.5z"/>
+                                  <path d="M13 5.466V1.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192zm0 9v-3.932a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192z"/>
+                                </svg> </button>
+                             
                             </div>
-                            <div class="w-100 p-3 d-flex justify-content-center">
-                              <a href='SasinatorReverse.html'><button type="button" class="btn btn-outline-dark">Przelicznik odwrotny</button></a>
-                            </div>
-                        </form></p>
+                        <p style="font-weight: bold; text-align: center;" ><span style="font-size: 2em;" id="result"></span><i> / sasin</i> </p></p>
+
+                        </form>
                     </section>
                 </div>
                 
@@ -103,7 +106,7 @@
         const Sasinator = function()
         {
             const insertValue = parseFloat(document.getElementById('insertValue').value);
-            document.getElementById('result').value = Number.isNaN(insertValue) ? 'wpisz poprawną liczbę' :
+            document.getElementById('result').innerText = Number.isNaN(insertValue) ? 'wpisz poprawną liczbę' :
             (insertValue / sasinValue).toFixed(13).replace(/\.0+$/,'');;
         }
 
