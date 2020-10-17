@@ -27,14 +27,14 @@
                     <div class="w-100 p-3 d-flex justify-content-center">
                     <section id="article-content">
                         <p><form id="sasinator">
-                            <input type="text" id="insertValue" placeholder="Wprowadź wartość"> =
-                            <input type="text" id="result" placeholder="" disabled="disabled"> sasin
+                            <input type="text" id="insertValue" placeholder="Wprowadź wartość"> sasin =
+                            <input type="text" id="result" placeholder="" disabled="disabled">
                             <div class="w-100 p-3 d-flex justify-content-center">
                                 <button type="button" class="btn btn-outline-dark">Przelicz</button>
                             </div>
                             <div class="w-100 p-3 d-flex justify-content-center">
-                              <a href='SasinatorReverse.html'><button type="button" class="btn btn-outline-dark">Przelicznik odwrotny</button></a>
-                            </div>
+                                <a href='index.html'><button type="button" class="btn btn-outline-dark">Przelicznik Zwykły</button></a>
+                              </div>
                         </form></p>
                     </section>
                 </div>
@@ -104,7 +104,7 @@
         {
             const insertValue = parseFloat(document.getElementById('insertValue').value);
             document.getElementById('result').value = Number.isNaN(insertValue) ? 'wpisz poprawną liczbę' :
-            (insertValue / sasinValue).toFixed(13).replace(/\.0+$/,'');;
+            (insertValue * sasinValue).toFixed(13).replace(/\.0+$/,'');
         }
 
         document.querySelector('#sasinator button').addEventListener('click', Sasinator);
